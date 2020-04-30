@@ -5,13 +5,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
             xmlns:local="clr-namespace:XamarinListViewTemplate.Views;assembly=XamarinListViewTemplate"
-
              x:Class="XamarinListViewTemplate.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:TemplateSelect x:Key="ItemTemplateSelector"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <StackLayout>
         <ListView
             x:Name="ListaExemplo"
-            ItemTemplate="local:TemplateSelect"
+            ItemTemplate="{StaticResource ItemTemplateSelector}"
             ></ListView>
     </StackLayout>
 

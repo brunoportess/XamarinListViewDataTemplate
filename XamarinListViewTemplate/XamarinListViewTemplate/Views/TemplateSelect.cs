@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using XamarinListViewTemplate.Models;
 
 namespace XamarinListViewTemplate.Views
 {
@@ -9,10 +10,10 @@ namespace XamarinListViewTemplate.Views
 
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
-            var Tipo = item;
-            if (Tipo.tipo == null)
+            CadastroModel cadastro = item as CadastroModel;
+            if (cadastro.Tipo == null)
                 return null;
-            switch (Tipo)
+            switch (cadastro.Tipo)
             {
                 case "user":
                     return Template1;

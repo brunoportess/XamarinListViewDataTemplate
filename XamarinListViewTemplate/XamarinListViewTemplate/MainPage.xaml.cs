@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using XamarinListViewTemplate.Models;
 
 namespace XamarinListViewTemplate
 {
@@ -21,14 +22,14 @@ namespace XamarinListViewTemplate
 
         private void PopularLista()
         {
-            List<dynamic> DadosLista = new List<dynamic>
+            List<CadastroModel> DadosLista = new List<CadastroModel>
             {
-                new
+                new CadastroModel
                 {
                     Nome = "Usuario 1",
                     Tipo = "user"
                 },
-                new
+                new CadastroModel
                 {
                     Endereco = "Rua do vizinho",
                     Tipo = "created"
