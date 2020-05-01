@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace XamarinListViewTemplate.Views
+namespace XamarinListViewTemplate.Views.CustomCell
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ListCell2 : ViewCell
+    public partial class ImageLeftCell : ViewCell
     {
-        public ListCell2()
+        public ImageLeftCell()
         {
             InitializeComponent();
         }

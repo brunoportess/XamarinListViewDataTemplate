@@ -1,5 +1,6 @@
 ﻿using Xamarin.Forms;
 using XamarinListViewTemplate.Models;
+using XamarinListViewTemplate.Views.CustomCell;
 
 namespace XamarinListViewTemplate.Views
 {
@@ -10,25 +11,24 @@ namespace XamarinListViewTemplate.Views
 
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
-            CadastroModel cadastro = item as CadastroModel;
-            if (cadastro.Tipo == null)
+            Personagem personagem = item as Personagem;
+            if (personagem == null)
                 return null;
-            switch (cadastro.Tipo)
+            if(personagem.Nome.Length > 12)
             {
-                case "user":
-                    return Template1;
-                case "created":
-                    return Template2;
-                default:
-                    return null;
+                return Template1;
+            }
+            else
+            {
+                return Template2;
             }
         }
 
 
         public TemplateSelect()
         {
-            Template1 = new DataTemplate(typeof(ListCell1));
-            Template2 = new DataTemplate(typeof(ListCell2));
+            Template1 = new DataTemplate(typeof(ImageLeftCell));
+            Template2 = new DataTemplate(typeof(ImageRightCell));
         }
     }
 }

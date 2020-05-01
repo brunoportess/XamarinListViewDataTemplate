@@ -4,10 +4,11 @@ using System.Text;
 
 namespace XamarinListViewTemplate.Models
 {
-    public class CadastroModel
+    public class Personagem
     {
         public string Nome { get; set; }
-        public string Endereco { get; set; }
-        public string Tipo { get; set; }
+        public string Descricao { get; set; }
+        public string UrlImagem { get; set; }
+        public string UrlWiki { get; set; }
     }
 }

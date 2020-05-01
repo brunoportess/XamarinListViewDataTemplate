@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinListViewTemplate.Views;
 
 namespace XamarinListViewTemplate
 {
@@ -10,7 +11,7 @@ namespace XamarinListViewTemplate
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new ListPage();
         }
 
         protected override void OnStart()

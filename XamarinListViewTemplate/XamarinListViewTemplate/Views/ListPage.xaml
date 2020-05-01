@@ -4,19 +4,22 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-            xmlns:local="clr-namespace:XamarinListViewTemplate.Views;assembly=XamarinListViewTemplate"
-             x:Class="XamarinListViewTemplate.MainPage">
+             xmlns:local="clr-namespace:XamarinListViewTemplate.Views;assembly=XamarinListViewTemplate"
+             x:Class="XamarinListViewTemplate.Views.ListPage">
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:TemplateSelect x:Key="ItemTemplateSelector"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <StackLayout>
-        <ListView
+    <StackLayout Orientation="Vertical">
+        <ListView 
             x:Name="ListaExemplo"
+            HasUnevenRows="True"
+            CachingStrategy="RecycleElement"
             ItemTemplate="{StaticResource ItemTemplateSelector}"
-            ></ListView>
+            >
+            
+        </ListView>
     </StackLayout>
-
 </ContentPage>
